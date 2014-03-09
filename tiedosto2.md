@@ -1,4 +1,4 @@
 Tiedosto 2
 ==========
 
-Tämä on tidosto #2
+Tämä on tiedosto #2

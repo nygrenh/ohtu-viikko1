@@ -84,7 +84,7 @@ public class VarastoTest {
 
     @Test
     public void liikaLisaaminenToimiiOikein() {
-        varasto.lisaaVarastoon(22);
+        varasto.lisaaVarastoon(2);
 
         assertEquals(10, varasto.getSaldo(), vertailuTarkkuus);
     }

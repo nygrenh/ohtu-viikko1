@@ -83,8 +83,17 @@ public class VarastoTest {
     }
 
     @Test
+    public void varastostaEiVoiOttaaNegatiivistaMaaraa() {
+        varasto.lisaaVarastoon(5);
+        double saatuMaara = varasto.otaVarastosta(-1);
+
+        assertEquals(0, saatuMaara, vertailuTarkkuus);
+        assertEquals(5, varasto.paljonkoMahtuu(), vertailuTarkkuus);
+    }
+
+    @Test
     public void liikaLisaaminenToimiiOikein() {
-        varasto.lisaaVarastoon(2);
+        varasto.lisaaVarastoon(22);
 
         assertEquals(10, varasto.getSaldo(), vertailuTarkkuus);
     }

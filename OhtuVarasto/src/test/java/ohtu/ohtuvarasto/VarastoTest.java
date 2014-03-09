@@ -66,6 +66,31 @@ public class VarastoTest {
     }
 
     @Test
+    public void kunOtetaanLiikaaSaadaanKaikkiMitaVoidaanAntaa() {
+        varasto.lisaaVarastoon(8);
+
+        double saatuMaara = varasto.otaVarastosta(9);
+
+        assertEquals(8, saatuMaara, vertailuTarkkuus);
+        assertEquals(10, varasto.paljonkoMahtuu(), vertailuTarkkuus);
+    }
+
+    @Test
+    public void varastoonEiVoiLisataNegatiivistaMaaraa() {
+        varasto.lisaaVarastoon(-2);
+
+        assertEquals(10, varasto.paljonkoMahtuu(), vertailuTarkkuus);
+    }
+
+    @Test
+    public void liikaLisaaminenToimiiOikein() {
+        varasto.lisaaVarastoon(22);
+
+        assertEquals(10, varasto.getSaldo(), vertailuTarkkuus);
+    }
+
+
+    @Test
     public void konstr() {
         varasto = new Varasto(-1);
         varasto = new Varasto(0);

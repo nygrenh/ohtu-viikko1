@@ -77,6 +77,7 @@ public class VarastoTest {
 
     @Test
     public void varastoonEiVoiLisataNegatiivistaMaaraa() {
+        assertTrue(false);
         varasto.lisaaVarastoon(-2);
 
         assertEquals(10, varasto.paljonkoMahtuu(), vertailuTarkkuus);
